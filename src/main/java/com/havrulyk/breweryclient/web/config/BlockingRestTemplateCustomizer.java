@@ -20,10 +20,10 @@ public class BlockingRestTemplateCustomizer implements RestTemplateCustomizer {
     private final Integer connectionRequestTimeout;
     private final Integer socketTimeout;
 
-    public BlockingRestTemplateCustomizer(@Value("${sfg.maxtotalconnections}") Integer maxTotalConnections,
-                                          @Value("${sfg.defaultmaxtotalconnections}") Integer defaultMaxTotalConnections,
-                                          @Value("${sfg.connectionrequesttimeout}") Integer connectionRequestTimeout,
-                                          @Value("${sfg.sockettimeout}") Integer socketTimeout) {
+    public BlockingRestTemplateCustomizer(@Value("${maxtotalconnections}") Integer maxTotalConnections,
+                                          @Value("${defaultmaxtotalconnections}") Integer defaultMaxTotalConnections,
+                                          @Value("${connectionrequesttimeout}") Integer connectionRequestTimeout,
+                                          @Value("${sockettimeout}") Integer socketTimeout) {
         this.maxTotalConnections = maxTotalConnections;
         this.defaultMaxTotalConnections = defaultMaxTotalConnections;
         this.connectionRequestTimeout = connectionRequestTimeout;
